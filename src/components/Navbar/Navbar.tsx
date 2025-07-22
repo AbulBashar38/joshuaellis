@@ -8,7 +8,7 @@ const Navbar = () => {
         <Image
           className="w-[225px]"
           src={logo}
-          weight={500}
+          width={500}
           height={500}
           alt="logo"
         ></Image>
