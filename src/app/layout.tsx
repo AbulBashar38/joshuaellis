@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Tenor_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -10,6 +10,41 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+const tenorSans = Tenor_Sans({
+  variable: "--font-tenor-sans",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const futura = localFont({
+  src: [
+    {
+      path: "../assets/fonts/SansSerifBookFLF.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SansSerifFLF-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/SansSerifFLF-Demibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SansSerifBldFLF.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/SansSerifBldFLF-Italic.otf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${futura.className} ${tenorSans.variable} antialiased`}
       >
         {children}
       </body>
