@@ -6,8 +6,6 @@ interface IProps {
   item: Item;
 }
 const ItemCard = ({ item }: IProps) => {
-  console.log(item);
-
   return (
     <Card className="w-full py-0 rounded-none border-none shadow-none">
       <div className="max-h-[430px] relative">

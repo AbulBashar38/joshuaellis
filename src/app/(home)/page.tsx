@@ -11,7 +11,7 @@ import ItemCard from "@/components/ItemCard";
 import Navbar from "@/components/Navbar/Navbar";
 import TopInfoBar from "@/components/Navbar/TopInfoBar";
 import { Item } from "@/types";
-import HeroPart from "./features/heroPart";
+import HeroPart from "./features/HeroPart";
 import ImageMasonry from "./features/ImageMasonry";
 import OurStory from "./features/OurStory";
 
